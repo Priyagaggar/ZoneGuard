@@ -2,8 +2,6 @@
 
 Detects people/vehicles entering or exiting user-defined polygon zones in a video, using YOLOv8 for detection, SORT for tracking, and polygon collision tests for zone logic. Events are logged with timestamp, object ID, and zone.
 
-See [DECISIONS.md](DECISIONS.md) for why each piece was chosen, [PROGRESS.md](PROGRESS.md) for current status, and [ISSUES_AND_LEARNINGS.md](ISSUES_AND_LEARNINGS.md) for bugs/fixes along the way.
-
 ## How it works
 
 Each video frame flows through the same pipeline:
