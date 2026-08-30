@@ -60,7 +60,6 @@ Run with `--debug` to log per-frame YOLO confidence/class for every raw detectio
 - **New ID after long occlusion.** If a tracked object is occluded or undetected for longer than `max_age` (15 frames, `config.py`), its track is evicted and it gets a brand-new ID on reappearance rather than resuming its old one. Plain SORT has no appearance-based re-identification to recognize "this is the same object I saw before" after a long gap — Deep SORT (which adds appearance embeddings) would fix this, but was deliberately not chosen for this project (see DECISIONS.md).
 - **Boundary flicker.** An object standing right at a zone edge can trigger rapid enter/exit events from small, real movements straddling the line. This is correct behavior given the current point-in-polygon check, not a bug — a hysteresis margin around zone edges would reduce it if it becomes a problem.
 
-Full evidence trace for how these were diagnosed (and the three related bugs that were fixed along the way) is in [ISSUES_AND_LEARNINGS.md](ISSUES_AND_LEARNINGS.md).
 
 ## Project layout
 
